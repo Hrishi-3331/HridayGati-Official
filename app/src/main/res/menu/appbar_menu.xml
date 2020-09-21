@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hrishistudio.vnit.omkarmic.omkarmichealthapp.Home.MainActivity">
+
+    <item android:id="@+id/appbar_settings"
+        android:icon="@mipmap/baseline_settings_black_24"
+        app:showAsAction="always"
+        android:title="Settings"
+        android:iconTint="@color/colorAccent"/>
+
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/drawer_profile"
+        android:title="My Profile"
+        android:icon="@drawable/man"
+        />
+
+    <item
+        android:icon="@drawable/store"
+        android:id="@+id/drawer_store"
+        android:title="Omkarmic Store" />
+
+    <item
+        android:icon="@drawable/tag"
+        android:id="@+id/drawer_subscriptions"
+        android:title="My Subscriptions" />
+
+    <item
+        android:icon="@drawable/support"
+        android:id="@+id/drawer_contact"
+        android:title="Contact Us" />
+
+    <item
+        android:icon="@drawable/power"
+        android:title="Logout"
+        android:id="@+id/drawer_logout" />
+
+</menu>

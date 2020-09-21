@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OmkarmicHealthApp</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="bp">Blood\nPressure</string>
+    <string name="body_temperature">Body\nTemperature</string>
+    <string name="inference_all_ok">All your body parameters appear to be normal. You are healthy.</string>
+</resources>

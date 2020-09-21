@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Dashboard.DashboardDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:onClick="goBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/back_icon"
+                    android:tint="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Parameter Report"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"
+                android:layout_marginBottom="8dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/post_user_image"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/heart_rate" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dd_parameter_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:singleLine="true"
+                        android:text="Heart Rate"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:singleLine="true"
+                        android:text="Detailed Report"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/warning2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <pl.pawelkleczkowski.customgauge.CustomGauge
+                        android:id="@+id/dd_gauge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        app:gaugeEndValue="110"
+                        app:gaugePointEndColor="@color/colorPrimary"
+                        app:gaugePointStartColor="@color/colorPrimaryDark"
+                        app:gaugeStartAngle="135"
+                        app:gaugeStartValue="90"
+                        app:gaugeStrokeCap="BUTT"
+                        app:gaugeStrokeColor="@color/color_xlight"
+                        app:gaugeStrokeWidth="20dp"
+                        app:gaugeSweepAngle="270" />
+
+                    <TextView
+                        android:id="@+id/dd_val_present"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-140dp"
+                        android:fontFamily="@font/montserrat_extrabold"
+                        android:text="80"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/dd_inference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-70dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_extrabold"
+                        android:padding="6dp"
+                        android:text="Normal"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:text="Daily Report"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/dd_daily"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                >
+
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:text="Weekly Report"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+           <HorizontalScrollView
+               android:scrollbars="none"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:paddingLeft="6dp"
+                   android:paddingRight="6dp"
+                   android:orientation="horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_monday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_mon"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Monday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_tuesday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_tue"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Tuesday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_wednesday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_wed"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Wednesday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_thursday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_thu"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Thursday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_friday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_fri"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Friday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_saturday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_sat"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Saturday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/warning2"
+                       android:gravity="center"
+                       android:orientation="vertical">
+
+                       <pl.pawelkleczkowski.customgauge.CustomGauge
+                           android:id="@+id/dd_gauge_sunday"
+                           android:layout_width="wrap_content"
+                           android:layout_height="100dp"
+                           android:layout_margin="10dp"
+                           app:gaugeEndValue="110"
+                           app:gaugePointEndColor="@color/colorPrimary"
+                           app:gaugePointStartColor="@color/colorPrimaryDark"
+                           app:gaugeStartAngle="135"
+                           app:gaugeStartValue="90"
+                           app:gaugeStrokeCap="BUTT"
+                           app:gaugeStrokeColor="@color/color_xlight"
+                           app:gaugeStrokeWidth="12dp"
+                           app:gaugeSweepAngle="270" />
+
+                       <TextView
+                           android:id="@+id/dd_val_sun"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="-75dp"
+                           android:fontFamily="@font/montserrat_extrabold"
+                           android:text="80"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="-50dp"
+                           android:layout_marginTop="16dp"
+                           android:fontFamily="@font/montserrat_bold"
+                           android:padding="6dp"
+                           android:text="Sunday"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorPrimaryDark"
+                           android:textSize="14sp" />
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="12dp"
+                android:text="Monthly Report"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/dd_monthly"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

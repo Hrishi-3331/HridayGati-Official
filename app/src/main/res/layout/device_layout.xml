@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:elevation="1dp"
+    android:layout_margin="4dp"
+    android:orientation="vertical"
+    android:background="@drawable/post_frame"
+    >
+
+    <ImageView
+        android:id="@+id/select_device_image"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_gravity="bottom"
+        android:id="@+id/select_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:padding="5dp"
+        android:text="Omkarmic Smart Watch"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_gravity="bottom"
+        android:id="@+id/select_device_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingBottom="8dp"
+        android:text="MSF2304R"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
