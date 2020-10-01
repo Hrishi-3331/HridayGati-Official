@@ -1,8 +1,8 @@
 package com.hrishistudio.vnit.omkarmic.omkarmichealthapp.Dashboard;
 
 import android.graphics.Color;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -17,11 +17,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.hrishistudio.vnit.omkarmic.omkarmichealthapp.R;
 
-import org.w3c.dom.Text;
-
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Random;
 
 import pl.pawelkleczkowski.customgauge.CustomGauge;
